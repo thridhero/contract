@@ -1,0 +1,14 @@
+// 全局导出 mixins
+@forward "theme-core/mixins";
+
+// 导入各主题变量
+@use "theme-light";
+@use "theme-dark";
+@use "theme-high-contrast";
+@use "theme-brand";
+
+// 全局样式适配
+@use "theme-core/mixins" as core;
+
+// 应用全局基础样式（过渡、基础背景和颜色）
+@include core.inject-global-styles();

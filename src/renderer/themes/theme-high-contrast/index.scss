@@ -1,0 +1,50 @@
+@use "../theme-core/mixins" as core;
+
+$high-contrast-theme: (
+  "colors": (
+    "primary": #ffff00,
+    "secondary": #ffffff,
+    "success": #00ff00,
+    "warning": #ffaa00,
+    "danger": #ff0000,
+    "info": #00ffff,
+    "background": #000000,
+    "surface": #000000,
+    "textPrimary": #ffffff,
+    "textSecondary": #cccccc,
+    "border": #ffffff,
+  ),
+  "typography": (
+    "fontFamily": "'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif",
+    "fontSizeBase": "16px",
+    "fontSizeSmall": "14px",
+    "fontSizeLarge": "18px",
+    "fontWeightNormal": 400,
+    "fontWeightBold": 700,
+  ),
+  "spacing": (
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+  ),
+  "shadows": (
+    "sm": "none",
+    "md": "none",
+    "lg": "none",
+  ),
+  "animations": (
+    "transitionFast": "0ms",
+    "transitionNormal": "0ms",
+    "transitionSlow": "0ms",
+  )
+);
+
+@include core.define-theme-variables("theme-high-contrast", $high-contrast-theme);
+
+@media (prefers-contrast: high) {
+  :root:not([data-theme]) {
+    @extend [data-theme="theme-high-contrast"];
+  }
+}

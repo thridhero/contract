@@ -1,0 +1,109 @@
+.drag-active-content {
+  background-color: rgba(13, 110, 253, 0.02);
+}
+
+.upload-progress-bar {
+  animation: slideUp 0.3s ease;
+  box-shadow: var(--shadow-lg);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.progress-fill {
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.resource-card {
+  box-shadow: none !important;
+}
+
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--btn-primary-bg) !important;
+}
+
+.resource-card .card-actions {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+.resource-card:hover .card-actions {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contract-context-menu :deep(.p-contextmenu-root-list) {
+  padding: 0.125rem;
+}
+
+.contract-context-menu :deep(.p-menuitem-link) {
+  padding: 0 !important;
+  min-height: auto;
+  line-height: 1;
+}
+
+.contract-context-menu :deep(.p-contextmenu-item-content) {
+  margin: 0;
+  border-radius: 0.375rem;
+}
+
+.contract-context-menu :deep(.p-contextmenu-item) {
+  margin: 0;
+}
+
+.contract-context-menu :deep(.p-contextmenu-item + .p-contextmenu-item) {
+  margin-top: 0.125rem;
+}
+
+.contract-context-menu :deep(.p-menuitem-icon) {
+  font-size: 0.8rem;
+}
+
+.contract-context-menu :deep(.p-menuitem-text) {
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.contract-context-menu :deep(.p-menu-separator) {
+  margin: 0.125rem 0;
+}
+
+.list-item:hover {
+  background-color: var(--sidebar-hover-bg);
+}
+
+.custom-datatable:deep(.p-datatable-tbody > tr:hover > td) {
+  background: color-mix(in srgb, var(--sidebar-hover-bg) 70%, transparent);
+}

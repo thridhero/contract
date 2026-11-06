@@ -1,0 +1,55 @@
+@use "sass:map";
+
+// 核心 CSS 变量定义辅助 Mixin
+@mixin define-theme-variables($theme-name, $config) {
+  [data-theme="#{$theme-name}"] {
+    // 颜色 Variables
+    @each $key, $value in map.get($config, "colors") {
+      --theme-color-#{$key}: #{$value};
+    }
+    
+    // 排版 Variables
+    @each $key, $value in map.get($config, "typography") {
+      --theme-typography-#{$key}: #{$value};
+    }
+
+    // 间距 Variables
+    @each $key, $value in map.get($config, "spacing") {
+      --theme-spacing-#{$key}: #{$value};
+    }
+
+    // 阴影 Variables
+    @each $key, $value in map.get($config, "shadows") {
+      --theme-shadow-#{$key}: #{$value};
+    }
+
+    // 动画 Variables
+    @each $key, $value in map.get($config, "animations") {
+      --theme-animation-#{$key}: #{$value};
+    }
+  }
+}
+
+// 响应式主题适配 Mixin
+@mixin prefers-color-scheme($scheme) {
+  @media (prefers-color-scheme: #{$scheme}) {
+    @content;
+  }
+}
+
+// 获取 CSS 变量的函数
+@function theme-var($category, $key) {
+  @return var(--theme-#{$category}-#{$key});
+}
+
+// 全局基础样式注入
+@mixin inject-global-styles() {
+  body {
+    background-color: theme-var("color", "background");
+    color: theme-var("color", "textPrimary");
+    font-family: theme-var("typography", "fontFamily");
+    font-size: theme-var("typography", "fontSizeBase");
+    transition: background-color theme-var("animation", "transitionNormal"),
+                color theme-var("animation", "transitionNormal");
+  }
+}

@@ -1,0 +1,135 @@
+/**
+ * 样式统一入口
+ * 按层顺序导入所有样式文件
+ */
+
+/* ============ CSS 层定义 ============ */
+@layer tailwind-base, primevue-base, variables, base, components, utilities, tailwind-utilities;
+
+/* ============ 变量层 ============ */
+@import './variables.css' layer(variables);
+
+/* ============ 基础层 ============ */
+@import './base.css' layer(base);
+
+/* ============ 组件层 ============ */
+@import './components.css' layer(components);
+
+/* ============ 工具类层 ============ */
+@import './utilities.css' layer(utilities);
+
+/* ============ Tailwind CSS ============ */
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'JetBrains Mono', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --spacing-0-5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1-5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-2-5: 0.625rem;
+  --spacing-3: 0.75rem;
+  --spacing-3-5: 0.875rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1rem;
+  --text-sm: 0.8125rem;
+  --text-sm--line-height: 1.125rem;
+  --text-base: 0.875rem;
+  --text-base--line-height: 1.25rem;
+  --text-lg: 1rem;
+  --text-lg--line-height: 1.5rem;
+
+  --height-18: 4.5rem;
+  --height-22: 5.5rem;
+  --height-24: 6rem;
+  --height-28: 7rem;
+  --height-32: 8rem;
+  --height-36: 9rem;
+
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-text: var(--sidebar-text);
+  --color-sidebar-text-secondary: var(--sidebar-text-secondary);
+  --color-sidebar-hover: var(--sidebar-hover-bg);
+  --color-sidebar-active: var(--sidebar-active-bg);
+  --color-sidebar-border: var(--sidebar-active-border);
+  --color-sidebar-divider: var(--sidebar-divider);
+
+  --color-titlebar-bg: var(--titlebar-bg);
+  --color-titlebar-text: var(--titlebar-text);
+  --color-titlebar-text-secondary: var(--titlebar-text-secondary);
+  --color-titlebar-border: var(--titlebar-border);
+
+  --color-content-bg: var(--content-bg);
+  --color-content-card: var(--content-card-bg);
+  --color-content-card-hover: var(--content-card-bg-hover);
+  --color-content-text: var(--content-text);
+  --color-content-text-secondary: var(--content-text-secondary);
+  --color-content-text-muted: var(--content-text-muted);
+  --color-content-border: var(--content-border);
+  --color-content-divider: var(--content-divider);
+
+  --color-btn-primary-bg: var(--btn-primary-bg);
+  --color-btn-primary-hover: var(--btn-primary-hover);
+  --color-btn-primary-active: var(--btn-primary-active);
+  --color-btn-primary-text: var(--btn-primary-text);
+
+  --color-btn-secondary-bg: var(--btn-secondary-bg);
+  --color-btn-secondary-hover: var(--btn-secondary-hover);
+  --color-btn-secondary-active: var(--btn-secondary-active);
+  --color-btn-secondary-text: var(--btn-secondary-text);
+
+  --color-btn-danger-bg: var(--btn-danger-bg);
+  --color-btn-danger-hover: var(--btn-danger-hover);
+  --color-btn-danger-active: var(--btn-danger-active);
+  --color-btn-danger-text: var(--btn-danger-text);
+
+  --color-btn-ghost-bg: var(--btn-ghost-bg);
+  --color-btn-ghost-hover: var(--btn-ghost-hover);
+  --color-btn-ghost-active: var(--btn-ghost-active);
+  --color-btn-ghost-text: var(--btn-ghost-text);
+
+  --color-input-bg: var(--input-bg);
+  --color-input-bg-hover: var(--input-bg-hover);
+  --color-input-bg-focus: var(--input-bg-focus);
+  --color-input-border: var(--input-border);
+  --color-input-border-hover: var(--input-border-hover);
+  --color-input-border-focus: var(--input-border-focus);
+  --color-input-text: var(--input-text);
+  --color-input-placeholder: var(--input-placeholder);
+
+  --color-table-header-bg: var(--table-header-bg);
+  --color-table-header-text: var(--table-header-text);
+  --color-table-row-bg: var(--table-row-bg);
+  --color-table-row-hover: var(--table-row-bg-hover);
+  --color-table-row-alt: var(--table-row-bg-alt);
+  --color-table-row-text: var(--table-row-text);
+  --color-table-border: var(--table-border);
+
+  --shadow-theme-sm: var(--shadow-sm);
+  --shadow-theme-md: var(--shadow-md);
+  --shadow-theme-lg: var(--shadow-lg);
+  --shadow-theme-xl: var(--shadow-xl);
+
+  --transition-duration-theme: 200ms;
+  --transition-timing-function-theme: ease;
+}
+
+/* ============ 额外的全局样式 ============ */
+@layer utilities {
+  /* 确保主题过渡动画对所有元素生效 */
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  /* 禁用某些元素的过渡动画 */
+  .no-theme-transition,
+  .no-theme-transition * {
+    @apply transition-none;
+  }
+}

@@ -1,0 +1,2133 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-05-14T09:04:19.745Z",
+  "root": {
+    "name": "合同设置",
+    "children": [
+      {
+        "name": "验收阶段"
+      },
+      {
+        "name": "合同状态"
+      },
+      {
+        "name": "合同执行方式"
+      },
+      {
+        "name": "订立形式"
+      },
+      {
+        "name": "合同采购来源"
+      },
+      {
+        "name": "合同审核模板"
+      },
+      {
+        "name": "工程状态"
+      },
+      {
+        "name": "印章状态"
+      },
+      {
+        "name": "印章设置"
+      },
+      {
+        "name": "合同执行进度"
+      },
+      {
+        "name": "营业方式"
+      },
+      {
+        "name": "分公司"
+      },
+      {
+        "name": "损坏类型"
+      },
+      {
+        "name": "合同执行情况"
+      },
+      {
+        "name": "需求类型"
+      },
+      {
+        "name": "结算意见来源"
+      },
+      {
+        "name": "审核意见"
+      },
+      {
+        "name": "文件类型"
+      },
+      {
+        "name": "开票类型"
+      },
+      {
+        "name": "成本类别"
+      },
+      {
+        "name": "合同扫描件类别"
+      },
+      {
+        "name": "施工方式"
+      },
+      {
+        "name": "配件销售类型"
+      },
+      {
+        "name": "合同结算方式"
+      },
+      {
+        "name": "立项依据"
+      },
+      {
+        "name": "印章类型"
+      },
+      {
+        "name": "合同税率"
+      },
+      {
+        "name": "合同分组"
+      },
+      {
+        "name": "币种"
+      },
+      {
+        "name": "合同类型"
+      },
+      {
+        "name": "结算方式"
+      },
+      {
+        "name": "收付方向"
+      },
+      {
+        "name": "测试"
+      },
+      {
+        "name": "服务类别"
+      },
+      {
+        "name": "计费方式"
+      }
+    ]
+  },
+  "dictionaries": {
+    "合同设置": [
+      {
+        "name": "按季度计费",
+        "code": "0003",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "按月计费",
+        "code": "0002",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "按年计费",
+        "code": "0001",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0001",
+        "remark": ""
+      }
+    ],
+    "验收阶段": [
+      {
+        "name": "地基验收",
+        "code": "",
+        "abbreviation": "DJYS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "竣工验收",
+        "code": "",
+        "abbreviation": "JGYS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      }
+    ],
+    "合同状态": [
+      {
+        "name": "已草拟",
+        "code": "0001",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "执行",
+        "code": "",
+        "abbreviation": "ZX",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "待审核",
+        "code": "0002",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0005",
+        "remark": ""
+      },
+      {
+        "name": "有效",
+        "code": "",
+        "abbreviation": "WZX",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "审核中",
+        "code": "0003",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0006",
+        "remark": ""
+      },
+      {
+        "name": "审核通过",
+        "code": "0004",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 4,
+        "value": "0007",
+        "remark": ""
+      },
+      {
+        "name": "待签署",
+        "code": "0005",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 5,
+        "value": "0009",
+        "remark": ""
+      },
+      {
+        "name": "终止",
+        "code": "",
+        "abbreviation": "FQ",
+        "bg_color": "0",
+        "sort_order": 5,
+        "value": "0008",
+        "remark": ""
+      },
+      {
+        "name": "已签署",
+        "code": "0006",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 6,
+        "value": "0010",
+        "remark": ""
+      },
+      {
+        "name": "生效中",
+        "code": "0007",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 7,
+        "value": "0011",
+        "remark": ""
+      },
+      {
+        "name": "履行中",
+        "code": "0008",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 8,
+        "value": "0012",
+        "remark": ""
+      },
+      {
+        "name": "部分履行",
+        "code": "0009",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 9,
+        "value": "0013",
+        "remark": ""
+      },
+      {
+        "name": "暂停履行",
+        "code": "0010",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 10,
+        "value": "0014",
+        "remark": ""
+      },
+      {
+        "name": "中止",
+        "code": "0011",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 11,
+        "value": "0015",
+        "remark": ""
+      },
+      {
+        "name": "已完成",
+        "code": "0013",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 13,
+        "value": "0016",
+        "remark": ""
+      },
+      {
+        "name": "已作废",
+        "code": "0014",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 14,
+        "value": "0017",
+        "remark": ""
+      },
+      {
+        "name": "已解除",
+        "code": "0015",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 15,
+        "value": "0018",
+        "remark": ""
+      },
+      {
+        "name": "已终止",
+        "code": "0016",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 16,
+        "value": "0019",
+        "remark": ""
+      },
+      {
+        "name": "待变更",
+        "code": "0017",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 17,
+        "value": "0020",
+        "remark": ""
+      },
+      {
+        "name": "变更中",
+        "code": "0018",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 18,
+        "value": "0021",
+        "remark": ""
+      },
+      {
+        "name": "已变更",
+        "code": "0019",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 19,
+        "value": "0022",
+        "remark": ""
+      },
+      {
+        "name": "待续签",
+        "code": "0020",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 20,
+        "value": "0023",
+        "remark": ""
+      },
+      {
+        "name": "续签中",
+        "code": "0021",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 21,
+        "value": "0024",
+        "remark": ""
+      },
+      {
+        "name": "已续签",
+        "code": "0022",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 22,
+        "value": "0025",
+        "remark": ""
+      },
+      {
+        "name": "逾期",
+        "code": "0023",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 23,
+        "value": "0026",
+        "remark": ""
+      },
+      {
+        "name": "违约",
+        "code": "0024",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 24,
+        "value": "0027",
+        "remark": ""
+      },
+      {
+        "name": "纠纷中",
+        "code": "0025",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 25,
+        "value": "0028",
+        "remark": ""
+      },
+      {
+        "name": "归档",
+        "code": "0026",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 26,
+        "value": "0029",
+        "remark": ""
+      },
+      {
+        "name": "草稿",
+        "code": "0027",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 27,
+        "value": "0030",
+        "remark": ""
+      },
+      {
+        "name": "驳回",
+        "code": "0028",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 28,
+        "value": "0031",
+        "remark": ""
+      }
+    ],
+    "合同执行方式": [
+      {
+        "name": "现金",
+        "code": "",
+        "abbreviation": "XJ",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "转帐",
+        "code": "",
+        "abbreviation": "ZZ",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      }
+    ],
+    "订立形式": [
+      {
+        "name": "口头形式",
+        "code": "",
+        "abbreviation": "KTXS",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "推定形式",
+        "code": "",
+        "abbreviation": "TDXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0005",
+        "remark": ""
+      },
+      {
+        "name": "公证形式",
+        "code": "",
+        "abbreviation": "GZXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "批准形式",
+        "code": "",
+        "abbreviation": "PZXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "书面形式",
+        "code": "",
+        "abbreviation": "SMXS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "登记形式",
+        "code": "",
+        "abbreviation": "DJXS",
+        "bg_color": "0",
+        "sort_order": 6,
+        "value": "0006",
+        "remark": ""
+      }
+    ],
+    "合同采购来源": [
+      {
+        "name": "单一采购",
+        "code": "",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "招标",
+        "code": "",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "竞争性谈判",
+        "code": "",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      }
+    ],
+    "合同审核模板": [],
+    "工程状态": [],
+    "印章状态": [
+      {
+        "name": "丢失",
+        "code": "",
+        "abbreviation": "DS",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      }
+    ],
+    "印章设置": [],
+    "合同执行进度": [],
+    "营业方式": [
+      {
+        "name": "普通用户工程",
+        "code": "",
+        "abbreviation": "PTYHGC",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      }
+    ],
+    "分公司": [],
+    "损坏类型": [],
+    "合同执行情况": [],
+    "需求类型": [
+      {
+        "name": "工器具需求",
+        "code": "",
+        "abbreviation": "GQJXQ",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      }
+    ],
+    "结算意见来源": [],
+    "审核意见": [],
+    "文件类型": [],
+    "开票类型": [],
+    "成本类别": [
+      {
+        "name": "材料费",
+        "code": "",
+        "abbreviation": "CLF",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "机械费",
+        "code": "",
+        "abbreviation": "JXF",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "管理费",
+        "code": "",
+        "abbreviation": "GLF",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0004",
+        "remark": ""
+      }
+    ],
+    "合同扫描件类别": [],
+    "施工方式": [
+      {
+        "name": "顺丰",
+        "code": "",
+        "abbreviation": "SF",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "圆通",
+        "code": "",
+        "abbreviation": "YT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "申通",
+        "code": "",
+        "abbreviation": "ST",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "EMS",
+        "code": "",
+        "abbreviation": "EMS",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0004",
+        "remark": ""
+      }
+    ],
+    "配件销售类型": [
+      {
+        "name": "双重密封圈",
+        "code": "",
+        "abbreviation": "SZMFQ",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "其他",
+        "code": "",
+        "abbreviation": "QT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      }
+    ],
+    "合同结算方式": [],
+    "立项依据": [
+      {
+        "name": "合同",
+        "code": "",
+        "abbreviation": "HT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "预算",
+        "code": "",
+        "abbreviation": "YS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "审定单",
+        "code": "",
+        "abbreviation": "SDD",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "框架协议",
+        "code": "",
+        "abbreviation": "KJXY",
+        "bg_color": "0",
+        "sort_order": 5,
+        "value": "0004",
+        "remark": ""
+      }
+    ],
+    "印章类型": [
+      {
+        "name": "公司章",
+        "code": "",
+        "abbreviation": "",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "私人章",
+        "code": "",
+        "abbreviation": "",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      }
+    ],
+    "合同税率": [
+      {
+        "name": "3",
+        "code": "",
+        "abbreviation": "*",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "6",
+        "code": "",
+        "abbreviation": "*",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      }
+    ],
+    "合同分组": [
+      {
+        "name": "销售合同",
+        "code": "0001",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0001",
+        "remark": ""
+      }
+    ],
+    "币种": [],
+    "合同类型": [
+      {
+        "name": "金融担保",
+        "code": "FINANCE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "FINANCE",
+        "remark": "借款、担保、保理"
+      },
+      {
+        "name": "战略合作",
+        "code": "COOPERATION",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "COOPERATION",
+        "remark": "框架协议、保密协议"
+      },
+      {
+        "name": "租赁",
+        "code": "LEASE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LEASE",
+        "remark": "房屋租赁、设备租赁"
+      },
+      {
+        "name": "买卖采购",
+        "code": "PURCHASE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "PURCHASE",
+        "remark": "商品采购、设备采购"
+      },
+      {
+        "name": "劳动合同",
+        "code": "LABOR",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LABOR",
+        "remark": "劳动合同、劳务外包"
+      },
+      {
+        "name": "法律服务",
+        "code": "LEGAL",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LEGAL",
+        "remark": "诉讼代理、法律顾问"
+      },
+      {
+        "name": "技术服务",
+        "code": "IT_SERVICE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "IT_SERVICE",
+        "remark": "技术咨询、运维服务"
+      }
+    ],
+    "结算方式": [],
+    "收付方向": [],
+    "测试": [
+      {
+        "name": "技术服务",
+        "code": "IT_SERVICE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "IT_SERVICE",
+        "remark": "技术咨询、运维服务"
+      },
+      {
+        "name": "法律服务",
+        "code": "LEGAL",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LEGAL",
+        "remark": "诉讼代理、法律顾问"
+      },
+      {
+        "name": "劳动合同",
+        "code": "LABOR",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LABOR",
+        "remark": "劳动合同、劳务外包"
+      },
+      {
+        "name": "买卖采购",
+        "code": "PURCHASE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "PURCHASE",
+        "remark": "商品采购、设备采购"
+      },
+      {
+        "name": "租赁",
+        "code": "LEASE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LEASE",
+        "remark": "房屋租赁、设备租赁"
+      },
+      {
+        "name": "战略合作",
+        "code": "COOPERATION",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "COOPERATION",
+        "remark": "框架协议、保密协议"
+      },
+      {
+        "name": "金融担保",
+        "code": "FINANCE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "FINANCE",
+        "remark": "借款、担保、保理"
+      },
+      {
+        "name": "3",
+        "code": "0014",
+        "abbreviation": "*",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "现金",
+        "code": "0016",
+        "abbreviation": "XJ",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "执行",
+        "code": "0018",
+        "abbreviation": "ZX",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "已草拟",
+        "code": "0001",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "双重密封圈",
+        "code": "0036",
+        "abbreviation": "SZMFQ",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "顺丰",
+        "code": "0038",
+        "abbreviation": "SF",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "公司章",
+        "code": "0045",
+        "abbreviation": "",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "技术服务",
+        "code": "IT_SERVICE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "IT_SERVICE",
+        "remark": "技术咨询、运维服务"
+      },
+      {
+        "name": "法律服务",
+        "code": "LEGAL",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LEGAL",
+        "remark": "诉讼代理、法律顾问"
+      },
+      {
+        "name": "劳动合同",
+        "code": "LABOR",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LABOR",
+        "remark": "劳动合同、劳务外包"
+      },
+      {
+        "name": "买卖采购",
+        "code": "PURCHASE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "PURCHASE",
+        "remark": "商品采购、设备采购"
+      },
+      {
+        "name": "租赁",
+        "code": "LEASE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "LEASE",
+        "remark": "房屋租赁、设备租赁"
+      },
+      {
+        "name": "战略合作",
+        "code": "COOPERATION",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "COOPERATION",
+        "remark": "框架协议、保密协议"
+      },
+      {
+        "name": "金融担保",
+        "code": "FINANCE",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "FINANCE",
+        "remark": "借款、担保、保理"
+      },
+      {
+        "name": "3",
+        "code": "0014",
+        "abbreviation": "*",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "现金",
+        "code": "0016",
+        "abbreviation": "XJ",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "执行",
+        "code": "0018",
+        "abbreviation": "ZX",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "已草拟",
+        "code": "0001",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 1,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "双重密封圈",
+        "code": "0036",
+        "abbreviation": "SZMFQ",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "顺丰",
+        "code": "0038",
+        "abbreviation": "SF",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "公司章",
+        "code": "0045",
+        "abbreviation": "",
+        "bg_color": "0",
+        "sort_order": 1,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "材料费",
+        "code": "0001",
+        "abbreviation": "CLF",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "口头形式",
+        "code": "0005",
+        "abbreviation": "KTXS",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "单一采购",
+        "code": "0011",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "6",
+        "code": "0015",
+        "abbreviation": "*",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "转帐",
+        "code": "0017",
+        "abbreviation": "ZZ",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "有效",
+        "code": "0019",
+        "abbreviation": "WZX",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "待审核",
+        "code": "0002",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0005",
+        "remark": ""
+      },
+      {
+        "name": "合同",
+        "code": "0032",
+        "abbreviation": "HT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "其他",
+        "code": "0037",
+        "abbreviation": "QT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "圆通",
+        "code": "0039",
+        "abbreviation": "YT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "私人章",
+        "code": "0046",
+        "abbreviation": "",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "材料费",
+        "code": "0001",
+        "abbreviation": "CLF",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "口头形式",
+        "code": "0005",
+        "abbreviation": "KTXS",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "单一采购",
+        "code": "0011",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "6",
+        "code": "0015",
+        "abbreviation": "*",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "转帐",
+        "code": "0017",
+        "abbreviation": "ZZ",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "有效",
+        "code": "0019",
+        "abbreviation": "WZX",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "待审核",
+        "code": "0002",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 2,
+        "value": "0005",
+        "remark": ""
+      },
+      {
+        "name": "合同",
+        "code": "0032",
+        "abbreviation": "HT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0001",
+        "remark": ""
+      },
+      {
+        "name": "其他",
+        "code": "0037",
+        "abbreviation": "QT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "圆通",
+        "code": "0039",
+        "abbreviation": "YT",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "私人章",
+        "code": "0046",
+        "abbreviation": "",
+        "bg_color": "0",
+        "sort_order": 2,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "机械费",
+        "code": "0003",
+        "abbreviation": "JXF",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "推定形式",
+        "code": "0006",
+        "abbreviation": "TDXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0005",
+        "remark": ""
+      },
+      {
+        "name": "公证形式",
+        "code": "0007",
+        "abbreviation": "GZXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "批准形式",
+        "code": "0008",
+        "abbreviation": "PZXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "书面形式",
+        "code": "0009",
+        "abbreviation": "SMXS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "招标",
+        "code": "0012",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "审核中",
+        "code": "0003",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0006",
+        "remark": ""
+      },
+      {
+        "name": "预算",
+        "code": "0033",
+        "abbreviation": "YS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "申通",
+        "code": "0040",
+        "abbreviation": "ST",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "地基验收",
+        "code": "0043",
+        "abbreviation": "DJYS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "竣工验收",
+        "code": "0044",
+        "abbreviation": "JGYS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "普通用户工程",
+        "code": "0048",
+        "abbreviation": "PTYHGC",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "机械费",
+        "code": "0003",
+        "abbreviation": "JXF",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "推定形式",
+        "code": "0006",
+        "abbreviation": "TDXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0005",
+        "remark": ""
+      },
+      {
+        "name": "公证形式",
+        "code": "0007",
+        "abbreviation": "GZXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "批准形式",
+        "code": "0008",
+        "abbreviation": "PZXS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "书面形式",
+        "code": "0009",
+        "abbreviation": "SMXS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "招标",
+        "code": "0012",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "审核中",
+        "code": "0003",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0006",
+        "remark": ""
+      },
+      {
+        "name": "预算",
+        "code": "0033",
+        "abbreviation": "YS",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "申通",
+        "code": "0040",
+        "abbreviation": "ST",
+        "bg_color": "0",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "地基验收",
+        "code": "0043",
+        "abbreviation": "DJYS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "竣工验收",
+        "code": "0044",
+        "abbreviation": "JGYS",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "普通用户工程",
+        "code": "0048",
+        "abbreviation": "PTYHGC",
+        "bg_color": "",
+        "sort_order": 3,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "管理费",
+        "code": "0004",
+        "abbreviation": "GLF",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "竞争性谈判",
+        "code": "0013",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "审核通过",
+        "code": "0004",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 4,
+        "value": "0007",
+        "remark": ""
+      },
+      {
+        "name": "审定单",
+        "code": "0034",
+        "abbreviation": "SDD",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "EMS",
+        "code": "0041",
+        "abbreviation": "EMS",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "工器具需求",
+        "code": "0042",
+        "abbreviation": "GQJXQ",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "丢失",
+        "code": "0047",
+        "abbreviation": "DS",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "管理费",
+        "code": "0004",
+        "abbreviation": "GLF",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "竞争性谈判",
+        "code": "0013",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "审核通过",
+        "code": "0004",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 4,
+        "value": "0007",
+        "remark": ""
+      },
+      {
+        "name": "审定单",
+        "code": "0034",
+        "abbreviation": "SDD",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "EMS",
+        "code": "0041",
+        "abbreviation": "EMS",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "工器具需求",
+        "code": "0042",
+        "abbreviation": "GQJXQ",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "丢失",
+        "code": "0047",
+        "abbreviation": "DS",
+        "bg_color": "0",
+        "sort_order": 4,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "终止",
+        "code": "0020",
+        "abbreviation": "FQ",
+        "bg_color": "0",
+        "sort_order": 5,
+        "value": "0008",
+        "remark": ""
+      },
+      {
+        "name": "待签署",
+        "code": "0005",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 5,
+        "value": "0009",
+        "remark": ""
+      },
+      {
+        "name": "框架协议",
+        "code": "0035",
+        "abbreviation": "KJXY",
+        "bg_color": "0",
+        "sort_order": 5,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "终止",
+        "code": "0020",
+        "abbreviation": "FQ",
+        "bg_color": "0",
+        "sort_order": 5,
+        "value": "0008",
+        "remark": ""
+      },
+      {
+        "name": "待签署",
+        "code": "0005",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 5,
+        "value": "0009",
+        "remark": ""
+      },
+      {
+        "name": "框架协议",
+        "code": "0035",
+        "abbreviation": "KJXY",
+        "bg_color": "0",
+        "sort_order": 5,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "登记形式",
+        "code": "0010",
+        "abbreviation": "DJXS",
+        "bg_color": "0",
+        "sort_order": 6,
+        "value": "0006",
+        "remark": ""
+      },
+      {
+        "name": "已签署",
+        "code": "0006",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 6,
+        "value": "0010",
+        "remark": ""
+      },
+      {
+        "name": "登记形式",
+        "code": "0010",
+        "abbreviation": "DJXS",
+        "bg_color": "0",
+        "sort_order": 6,
+        "value": "0006",
+        "remark": ""
+      },
+      {
+        "name": "已签署",
+        "code": "0006",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 6,
+        "value": "0010",
+        "remark": ""
+      },
+      {
+        "name": "生效中",
+        "code": "0007",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 7,
+        "value": "0011",
+        "remark": ""
+      },
+      {
+        "name": "生效中",
+        "code": "0007",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 7,
+        "value": "0011",
+        "remark": ""
+      },
+      {
+        "name": "履行中",
+        "code": "0008",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 8,
+        "value": "0012",
+        "remark": ""
+      },
+      {
+        "name": "履行中",
+        "code": "0008",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 8,
+        "value": "0012",
+        "remark": ""
+      },
+      {
+        "name": "部分履行",
+        "code": "0009",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 9,
+        "value": "0013",
+        "remark": ""
+      },
+      {
+        "name": "部分履行",
+        "code": "0009",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 9,
+        "value": "0013",
+        "remark": ""
+      },
+      {
+        "name": "暂停履行",
+        "code": "0010",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 10,
+        "value": "0014",
+        "remark": ""
+      },
+      {
+        "name": "暂停履行",
+        "code": "0010",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 10,
+        "value": "0014",
+        "remark": ""
+      },
+      {
+        "name": "中止",
+        "code": "0011",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 11,
+        "value": "0015",
+        "remark": ""
+      },
+      {
+        "name": "中止",
+        "code": "0011",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 11,
+        "value": "0015",
+        "remark": ""
+      },
+      {
+        "name": "已完成",
+        "code": "0013",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 13,
+        "value": "0016",
+        "remark": ""
+      },
+      {
+        "name": "已完成",
+        "code": "0013",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 13,
+        "value": "0016",
+        "remark": ""
+      },
+      {
+        "name": "已作废",
+        "code": "0014",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 14,
+        "value": "0017",
+        "remark": ""
+      },
+      {
+        "name": "已作废",
+        "code": "0014",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 14,
+        "value": "0017",
+        "remark": ""
+      },
+      {
+        "name": "已解除",
+        "code": "0015",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 15,
+        "value": "0018",
+        "remark": ""
+      },
+      {
+        "name": "已解除",
+        "code": "0015",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 15,
+        "value": "0018",
+        "remark": ""
+      },
+      {
+        "name": "已终止",
+        "code": "0016",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 16,
+        "value": "0019",
+        "remark": ""
+      },
+      {
+        "name": "已终止",
+        "code": "0016",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 16,
+        "value": "0019",
+        "remark": ""
+      },
+      {
+        "name": "待变更",
+        "code": "0017",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 17,
+        "value": "0020",
+        "remark": ""
+      },
+      {
+        "name": "待变更",
+        "code": "0017",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 17,
+        "value": "0020",
+        "remark": ""
+      },
+      {
+        "name": "变更中",
+        "code": "0018",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 18,
+        "value": "0021",
+        "remark": ""
+      },
+      {
+        "name": "变更中",
+        "code": "0018",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 18,
+        "value": "0021",
+        "remark": ""
+      },
+      {
+        "name": "已变更",
+        "code": "0019",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 19,
+        "value": "0022",
+        "remark": ""
+      },
+      {
+        "name": "已变更",
+        "code": "0019",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 19,
+        "value": "0022",
+        "remark": ""
+      },
+      {
+        "name": "待续签",
+        "code": "0020",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 20,
+        "value": "0023",
+        "remark": ""
+      },
+      {
+        "name": "待续签",
+        "code": "0020",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 20,
+        "value": "0023",
+        "remark": ""
+      },
+      {
+        "name": "续签中",
+        "code": "0021",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 21,
+        "value": "0024",
+        "remark": ""
+      },
+      {
+        "name": "续签中",
+        "code": "0021",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 21,
+        "value": "0024",
+        "remark": ""
+      },
+      {
+        "name": "已续签",
+        "code": "0022",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 22,
+        "value": "0025",
+        "remark": ""
+      },
+      {
+        "name": "已续签",
+        "code": "0022",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 22,
+        "value": "0025",
+        "remark": ""
+      },
+      {
+        "name": "逾期",
+        "code": "0023",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 23,
+        "value": "0026",
+        "remark": ""
+      },
+      {
+        "name": "逾期",
+        "code": "0023",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 23,
+        "value": "0026",
+        "remark": ""
+      },
+      {
+        "name": "违约",
+        "code": "0024",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 24,
+        "value": "0027",
+        "remark": ""
+      },
+      {
+        "name": "违约",
+        "code": "0024",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 24,
+        "value": "0027",
+        "remark": ""
+      },
+      {
+        "name": "纠纷中",
+        "code": "0025",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 25,
+        "value": "0028",
+        "remark": ""
+      },
+      {
+        "name": "纠纷中",
+        "code": "0025",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 25,
+        "value": "0028",
+        "remark": ""
+      },
+      {
+        "name": "归档",
+        "code": "0026",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 26,
+        "value": "0029",
+        "remark": ""
+      },
+      {
+        "name": "归档",
+        "code": "0026",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 26,
+        "value": "0029",
+        "remark": ""
+      },
+      {
+        "name": "草稿",
+        "code": "0027",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 27,
+        "value": "0030",
+        "remark": ""
+      },
+      {
+        "name": "草稿",
+        "code": "0027",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 27,
+        "value": "0030",
+        "remark": ""
+      },
+      {
+        "name": "驳回",
+        "code": "0028",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 28,
+        "value": "0031",
+        "remark": ""
+      },
+      {
+        "name": "驳回",
+        "code": "0028",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 28,
+        "value": "0031",
+        "remark": ""
+      }
+    ],
+    "服务类别": [
+      {
+        "name": "技术中介服务",
+        "code": "0004",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0004",
+        "remark": ""
+      },
+      {
+        "name": "技术培训服务",
+        "code": "0003",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0003",
+        "remark": ""
+      },
+      {
+        "name": "信息技术服务",
+        "code": "0002",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0002",
+        "remark": ""
+      },
+      {
+        "name": "设计服务",
+        "code": "0001",
+        "abbreviation": "",
+        "bg_color": "",
+        "sort_order": 0,
+        "value": "0001",
+        "remark": ""
+      }
+    ],
+    "计费方式": []
+  }
+}

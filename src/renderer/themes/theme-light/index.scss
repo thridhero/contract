@@ -1,0 +1,51 @@
+@use "../theme-core/mixins" as core;
+
+$light-theme: (
+  "colors": (
+    "primary": #3b82f6,
+    "secondary": #64748b,
+    "success": #10b981,
+    "warning": #f59e0b,
+    "danger": #ef4444,
+    "info": #0ea5e9,
+    "background": #ffffff,
+    "surface": #f8fafc,
+    "textPrimary": #0f172a,
+    "textSecondary": #64748b,
+    "border": #e2e8f0,
+  ),
+  "typography": (
+    "fontFamily": "'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif",
+    "fontSizeBase": "16px",
+    "fontSizeSmall": "14px",
+    "fontSizeLarge": "18px",
+    "fontWeightNormal": 400,
+    "fontWeightBold": 600,
+  ),
+  "spacing": (
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+  ),
+  "shadows": (
+    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+  ),
+  "animations": (
+    "transitionFast": "100ms ease-in-out",
+    "transitionNormal": "200ms ease-in-out",
+    "transitionSlow": "300ms ease-in-out",
+  )
+);
+
+@include core.define-theme-variables("theme-light", $light-theme);
+
+// Fallback for missing data-theme using prefers-color-scheme
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    @extend [data-theme="theme-light"];
+  }
+}

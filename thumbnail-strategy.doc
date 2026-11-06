@@ -1,0 +1,33 @@
+合同文件缩略图落盘策略说明
+
+1. 背景
+为支持 10 万级图片/文件缩略图预览，避免将缩略图以 base64/DataURL 形式写入 SQLite（体积膨胀、WAL/查询开销大、迁移慢），采用“缩略图文件落盘 + 数据库存路径”的方案。
+
+2. 存储方案
+2.1 缩略图文件位置
+- 缩略图保存到每个合同目录下的隐藏目录：
+  <合同folder_name>/.thumbs/<前2位>/<sha256或fileId>.webp
+- 其中 <前2位> 为 sha256（优先）或 fileId 的前两位，用于分桶，避免单目录文件过多。
+
+2.2 数据库存储字段
+- contract_files.first_page_thumb：保存缩略图文件的绝对路径（不再保存 data:image/webp;base64,...）
+- contract_files.preview_status：缩略图状态（pending/processing/completed/failed）
+
+3. 生成流程（简述）
+3.1 预览提取
+- 渲染进程使用 PreviewAdapter 读取源文件并渲染首页/首帧到 Canvas，再输出 webp DataURL（480px 宽，质量 0.75）。
+
+3.2 落盘与写库
+- 将 DataURL 转换为 Uint8Array（二进制 webp）。
+- 通过 IPC 调用 contractFiles.saveThumbnailFile：
+  1) 写入 <合同folder_name>/.thumbs/.../*.webp
+  2) 更新 contract_files.first_page_thumb 为该文件路径
+  3) 更新 contract_files.preview_status 为 completed
+
+4. 清理策略（简述）
+- 当缩略图被重置（first_page_thumb 置空）或文件记录被删除时：
+  - 若旧缩略图路径是落盘文件（非 data:）且在同一合同下没有其他记录引用，则删除该缩略图文件，避免累积垃圾。
+
+5. 使用者注意事项
+- “资源文件目录”中不会出现 base64 字符串文件；缩略图均为 .thumbs 目录下的 .webp 文件。
+- 列表/瀑布流展示时会读取 first_page_thumb 指向的文件路径进行显示。

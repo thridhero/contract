@@ -1,0 +1,305 @@
+/**
+ * CSS 变量系统
+ * 采用分层设计：原始色板 -> 语义层 -> 组件层
+ */
+
+/* ============ 1. 原始色板（不直接使用） ============ */
+:root {
+  /* 蓝色系 */
+  --color-blue-50: #E7F1FF;
+  --color-blue-100: #B0D4FF;
+  --color-blue-200: #8AC2FF;
+  --color-blue-300: #54A5FF;
+  --color-blue-400: #3395FF;
+  --color-blue-500: #0D6EFD;
+  --color-blue-600: #0C64E6;
+  --color-blue-700: #094EB4;
+  --color-blue-800: #073D8B;
+  --color-blue-900: #052E6A;
+
+  /* 灰色系 */
+  --color-gray-50: #F8F9FA;
+  --color-gray-100: #F1F3F5;
+  --color-gray-200: #E9ECEF;
+  --color-gray-300: #DEE2E6;
+  --color-gray-400: #CED4DA;
+  --color-gray-500: #ADB5BD;
+  --color-gray-600: #6C757D;
+  --color-gray-700: #495057;
+  --color-gray-800: #343A40;
+  --color-gray-900: #212529;
+
+  /* 红色系 */
+  --color-red-50: #FCE8EA;
+  --color-red-100: #F5B7BD;
+  --color-red-200: #F0949D;
+  --color-red-300: #E96370;
+  --color-red-400: #E54453;
+  --color-red-500: #DC3545;
+  --color-red-600: #C8303F;
+  --color-red-700: #9C2631;
+  --color-red-800: #791E26;
+  --color-red-900: #5C171D;
+
+  /* 绿色系 */
+  --color-green-50: #E8F8E9;
+  --color-green-100: #B9EBBC;
+  --color-green-200: #97E29B;
+  --color-green-300: #68D56E;
+  --color-green-400: #4ACD51;
+  --color-green-500: #1DB954;
+  --color-green-600: #1AA84C;
+  --color-green-700: #14833B;
+  --color-green-800: #10652E;
+  --color-green-900: #0C4D23;
+
+  /* 橙色系 */
+  --color-orange-50: #FFF4E6;
+  --color-orange-100: #FFDEB0;
+  --color-orange-200: #FFCE8A;
+  --color-orange-300: #FFB654;
+  --color-orange-400: #FFA833;
+  --color-orange-500: #FF9800;
+  --color-orange-600: #E88A00;
+  --color-orange-700: #B56C00;
+  --color-orange-800: #8C5400;
+  --color-orange-900: #6B4000;
+}
+
+/* ============ 2. 语义层（按用途定义） ============ */
+:root {
+  /* 字体覆盖 */
+  --p-font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* 主题色 */
+  --color-primary: var(--color-blue-500);
+  --color-primary-hover: var(--color-blue-600);
+  --color-primary-active: var(--color-blue-700);
+  --color-secondary: var(--color-gray-600);
+  --color-secondary-hover: var(--color-gray-700);
+  --color-secondary-active: var(--color-gray-800);
+  --color-danger: var(--color-red-500);
+  --color-danger-hover: var(--color-red-600);
+  --color-danger-active: var(--color-red-700);
+  --color-success: var(--color-green-500);
+  --color-warning: var(--color-orange-500);
+
+  /* 背景色 */
+  --color-bg-base: var(--color-gray-50);
+  --color-bg-surface: #FFFFFF;
+  --color-bg-elevated: var(--color-gray-100);
+  --color-bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* 文字色 */
+  --color-text-primary: var(--color-gray-900);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-tertiary: var(--color-gray-600);
+  --color-text-muted: var(--color-gray-500);
+  --color-text-inverse: #FFFFFF;
+
+  /* 边框色 */
+  --color-border-default: var(--color-gray-300);
+  --color-border-hover: var(--color-gray-400);
+  --color-border-focus: var(--color-blue-500);
+  --color-border-divider: var(--color-gray-200);
+
+  /* 滚动条 */
+  --color-scrollbar-track: transparent;
+  --color-scrollbar-thumb: var(--color-gray-500);
+  --color-scrollbar-thumb-hover: var(--color-gray-600);
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* ============ 3. 组件层（具体应用） ============ */
+:root {
+  /* 侧边栏 */
+  --sidebar-bg: var(--color-bg-base);
+  --sidebar-text: var(--color-text-primary);
+  --sidebar-text-secondary: var(--color-text-tertiary);
+  --sidebar-hover-bg: var(--color-gray-200);
+  --sidebar-active-bg: var(--color-gray-300);
+  --sidebar-active-border: var(--color-primary);
+  --sidebar-divider: var(--color-border-divider);
+
+  /* 标题栏 */
+  --titlebar-bg: var(--color-bg-surface);
+  --titlebar-text: var(--color-text-primary);
+  --titlebar-text-secondary: var(--color-text-tertiary);
+  --titlebar-border: var(--color-border-divider);
+
+  /* 内容区域 */
+  --content-bg: var(--color-bg-surface);
+  --content-card-bg: var(--color-bg-base);
+  --content-card-bg-hover: var(--color-bg-elevated);
+  --content-text: var(--color-text-primary);
+  --content-text-secondary: var(--color-text-secondary);
+  --content-text-muted: var(--color-text-tertiary);
+  --content-border: var(--color-border-default);
+  --content-divider: var(--color-border-divider);
+
+  /* 按钮 - 主要 */
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-hover: var(--color-primary-hover);
+  --btn-primary-active: var(--color-primary-active);
+  --btn-primary-text: var(--color-text-inverse);
+
+  /* 按钮 - 次要 */
+  --btn-secondary-bg: var(--color-secondary);
+  --btn-secondary-hover: var(--color-secondary-hover);
+  --btn-secondary-active: var(--color-secondary-active);
+  --btn-secondary-text: var(--color-text-inverse);
+
+  /* 按钮 - 危险 */
+  --btn-danger-bg: var(--color-danger);
+  --btn-danger-hover: var(--color-danger-hover);
+  --btn-danger-active: var(--color-danger-active);
+  --btn-danger-text: var(--color-text-inverse);
+
+  /* 按钮 - 幽灵 */
+  --btn-ghost-bg: transparent;
+  --btn-ghost-hover: var(--color-bg-elevated);
+  --btn-ghost-active: var(--color-gray-200);
+  --btn-ghost-text: var(--color-text-primary);
+
+  /* 输入框 */
+  --input-bg: var(--color-bg-surface);
+  --input-bg-hover: var(--color-bg-surface);
+  --input-bg-focus: var(--color-bg-surface);
+  --input-border: var(--color-border-default);
+  --input-border-hover: var(--color-border-hover);
+  --input-border-focus: var(--color-border-focus);
+  --input-text: var(--color-text-primary);
+  --input-placeholder: var(--color-text-muted);
+
+  /* 表格 */
+  --table-header-bg: var(--color-bg-base);
+  --table-header-text: var(--color-text-primary);
+  --table-row-bg: var(--color-bg-surface);
+  --table-row-bg-hover: var(--color-bg-base);
+  --table-row-bg-alt: #FBFCFD;
+  --table-row-text: var(--color-text-primary);
+  --table-border: var(--color-border-default);
+
+  /* 分隔线 */
+  --separator-color: var(--color-border-default);
+}
+
+/* ============ 深色模式 ============ */
+.dark,
+.dark-mode {
+  /* 语义层 - 深色 */
+  --color-bg-base: #1E2127;
+  --color-bg-surface: #0D1117;
+  --color-bg-elevated: #161B22;
+  --color-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --color-text-primary: #E8EAED;
+  --color-text-secondary: #C9D1D9;
+  --color-text-tertiary: #9AA0A6;
+  --color-text-muted: #8B949E;
+  --color-text-inverse: #0D1117;
+
+  --color-border-default: #30363D;
+  --color-border-hover: #484F58;
+  --color-border-focus: #58A6FF;
+  --color-border-divider: #21262D;
+
+  --color-primary: #58A6FF;
+  --color-primary-hover: #79B8FF;
+  --color-primary-active: #A5D6FF;
+  --color-secondary: #484F58;
+  --color-secondary-hover: #3D444D;
+  --color-secondary-active: #333A42;
+  --color-danger: #F85149;
+  --color-danger-hover: #FF7B72;
+  --color-danger-active: #FFA198;
+
+  --color-scrollbar-track: transparent;
+  --color-scrollbar-thumb: #484F58;
+  --color-scrollbar-thumb-hover: #6E7681;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+
+  /* 组件层 - 深色 */
+  --sidebar-bg: var(--color-bg-base);
+  --sidebar-text: var(--color-text-primary);
+  --sidebar-text-secondary: var(--color-text-tertiary);
+  --sidebar-hover-bg: #2D333B;
+  --sidebar-active-bg: #373E47;
+  --sidebar-active-border: var(--color-primary);
+  --sidebar-divider: var(--color-border-divider);
+
+  --titlebar-bg: #161B22;
+  --titlebar-text: var(--color-text-primary);
+  --titlebar-text-secondary: var(--color-text-tertiary);
+  --titlebar-border: var(--color-border-divider);
+
+  --content-bg: var(--color-bg-surface);
+  --content-card-bg: var(--color-bg-elevated);
+  --content-card-bg-hover: #1C2128;
+  --content-text: var(--color-text-primary);
+  --content-text-secondary: var(--color-text-secondary);
+  --content-text-muted: var(--color-text-tertiary);
+  --content-border: var(--color-border-default);
+  --content-divider: var(--color-border-divider);
+
+  --btn-primary-bg: var(--color-primary);
+  --btn-primary-hover: var(--color-primary-hover);
+  --btn-primary-active: var(--color-primary-active);
+  --btn-primary-text: var(--color-text-inverse);
+
+  --btn-secondary-bg: var(--color-secondary);
+  --btn-secondary-hover: var(--color-secondary-hover);
+  --btn-secondary-active: var(--color-secondary-active);
+  --btn-secondary-text: var(--color-text-primary);
+
+  --btn-danger-bg: var(--color-danger);
+  --btn-danger-hover: var(--color-danger-hover);
+  --btn-danger-active: var(--color-danger-active);
+  --btn-danger-text: var(--color-text-inverse);
+
+  --btn-ghost-bg: transparent;
+  --btn-ghost-hover: #21262D;
+  --btn-ghost-active: #30363D;
+  --btn-ghost-text: var(--color-text-primary);
+
+  --input-bg: var(--color-bg-surface);
+  --input-bg-hover: var(--color-bg-elevated);
+  --input-bg-focus: var(--color-bg-surface);
+  --input-border: var(--color-border-default);
+  --input-border-hover: var(--color-border-hover);
+  --input-border-focus: var(--color-border-focus);
+  --input-text: var(--color-text-primary);
+  --input-placeholder: #6E7681;
+
+  --table-header-bg: var(--color-bg-elevated);
+  --table-header-text: var(--color-text-primary);
+  --table-row-bg: var(--color-bg-surface);
+  --table-row-bg-hover: var(--color-bg-elevated);
+  --table-row-bg-alt: #111820;
+  --table-row-text: var(--color-text-primary);
+  --table-border: var(--color-border-default);
+
+  --separator-color: var(--color-border-default);
+}
+
+/* ============ 主题过渡动画 ============ */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+/* 禁用某些元素的过渡动画 */
+.no-theme-transition,
+.no-theme-transition * {
+  transition: none !important;
+}

@@ -1,0 +1,50 @@
+@use "../theme-core/mixins" as core;
+
+$dark-theme: (
+  "colors": (
+    "primary": #60a5fa,
+    "secondary": #94a3b8,
+    "success": #34d399,
+    "warning": #fbbf24,
+    "danger": #f87171,
+    "info": #38bdf8,
+    "background": #0f172a,
+    "surface": #1e293b,
+    "textPrimary": #f8fafc,
+    "textSecondary": #cbd5e1,
+    "border": #334155,
+  ),
+  "typography": (
+    "fontFamily": "'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif",
+    "fontSizeBase": "16px",
+    "fontSizeSmall": "14px",
+    "fontSizeLarge": "18px",
+    "fontWeightNormal": 400,
+    "fontWeightBold": 600,
+  ),
+  "spacing": (
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+  ),
+  "shadows": (
+    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.2)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3)",
+  ),
+  "animations": (
+    "transitionFast": "100ms ease-in-out",
+    "transitionNormal": "200ms ease-in-out",
+    "transitionSlow": "300ms ease-in-out",
+  )
+);
+
+@include core.define-theme-variables("theme-dark", $dark-theme);
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @extend [data-theme="theme-dark"];
+  }
+}

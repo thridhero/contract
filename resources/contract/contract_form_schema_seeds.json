@@ -1,0 +1,120 @@
+{
+  "coreRequiredFields": [
+    "contractName",
+    "contractCode",
+    "clientName",
+    "partyBName",
+    "contractType",
+    "signingDate"
+  ],
+  "builtinFieldDefinitions": [
+    { "key": "contractName", "label": "合同名称", "type": "text", "section": "base", "required": true, "visible": true, "order": 10, "span": 1, "builtin": true, "lockedVisible": true, "lockedRequired": true, "lockedKey": true, "lockedType": true },
+    { "key": "contractCode", "label": "合同编号", "type": "text", "section": "base", "required": true, "visible": true, "order": 20, "span": 1, "placeholder": "例如 HT-2026-001", "builtin": true, "lockedVisible": true, "lockedRequired": true, "lockedKey": true, "lockedType": true },
+    { "key": "clientName", "label": "甲方单位", "type": "select", "section": "base", "required": true, "visible": true, "order": 30, "span": 1, "builtin": true, "lockedVisible": true, "lockedRequired": true, "lockedKey": true, "lockedType": true },
+    { "key": "partyBName", "label": "乙方单位", "type": "select", "section": "base", "required": true, "visible": true, "order": 50, "span": 1, "builtin": true, "lockedVisible": true, "lockedRequired": true, "lockedKey": true, "lockedType": true },
+    { "key": "contractType", "label": "合同类型", "type": "select", "section": "base", "required": true, "visible": true, "order": 80, "span": 1, "optionSource": { "type": "dictionary", "groupName": "合同类型" }, "builtin": true, "lockedVisible": true, "lockedRequired": true, "lockedKey": true, "lockedType": true },
+    { "key": "signingDate", "label": "签约日期", "type": "date", "section": "base", "required": true, "visible": true, "order": 90, "span": 1, "builtin": true, "lockedVisible": true, "lockedRequired": true, "lockedKey": true, "lockedType": true },
+    { "key": "contractAmount", "label": "合同金额", "type": "number", "section": "base", "required": true, "visible": true, "order": 110, "span": 1, "builtin": true, "lockedKey": true, "lockedType": true, "lockedRequired": true },
+    { "key": "contractStatus", "label": "合同状态", "type": "select", "section": "base", "required": false, "visible": true, "order": 120, "span": 1, "optionSource": { "type": "dictionary", "groupName": "合同状态" }, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "department", "label": "部门", "type": "tree", "section": "content", "required": false, "visible": true, "order": 130, "span": 1, "optionSource": { "type": "treeDictionary", "groupName": "部门" }, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "responsiblePerson", "label": "责任人", "type": "select", "section": "content", "required": false, "visible": true, "order": 140, "span": 1, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "endDate", "label": "合同截止日期", "type": "date", "section": "base", "required": false, "visible": true, "order": 160, "span": 1, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "settlementMethod", "label": "结算方式", "type": "select", "section": "content", "required": false, "visible": true, "order": 170, "span": 1, "optionSource": { "type": "dictionary", "groupName": "结算方式" }, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "signingForm", "label": "合同订立形式", "type": "select", "section": "content", "required": false, "visible": true, "order": 180, "span": 1, "optionSource": { "type": "dictionary", "groupName": "订立形式" }, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "procurementSource", "label": "合同采购来源", "type": "select", "section": "content", "required": false, "visible": true, "order": 190, "span": 1, "optionSource": { "type": "dictionary", "groupName": "合同采购来源" }, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "executionMethod", "label": "合同执行方式", "type": "select", "section": "content", "required": false, "visible": true, "order": 210, "span": 1, "optionSource": { "type": "dictionary", "groupName": "合同执行方式" }, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "contractSummary", "label": "合同摘要", "type": "richtext", "section": "content", "required": false, "visible": true, "order": 220, "span": 2, "builtin": true, "lockedKey": true, "lockedType": true },
+    { "key": "remark", "label": "备注", "type": "textarea", "section": "content", "required": false, "visible": true, "order": 240, "span": 2, "builtin": true, "lockedKey": true, "lockedType": true }
+  ],
+  "contractTypeSeeds": {
+    "IT_DEV": [
+      { "key": "projectName", "label": "项目名称", "type": "text", "section": "content", "required": true, "span": 1 },
+      { "key": "techStack", "label": "技术栈", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "deliveryDate", "label": "交付日期", "type": "date", "section": "content", "required": true, "span": 1 },
+      { "key": "acceptanceStandard", "label": "验收标准", "type": "textarea", "section": "content", "required": false, "span": 2 },
+      { "key": "sourceCodeOwnership", "label": "源码归属", "type": "select", "section": "content", "required": true, "span": 1, "options": ["甲方", "乙方", "共同所有"] },
+      { "key": "warrantyMonths", "label": "质保期(月)", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "maintenancePeriod", "label": "维护期说明", "type": "textarea", "section": "content", "required": false, "span": 2 },
+      { "key": "intellectualProperty", "label": "知识产权说明", "type": "textarea", "section": "content", "required": false, "span": 2 }
+    ],
+    "IT_SERVICE": [
+      { "key": "serviceType", "label": "服务类型", "type": "select", "section": "content", "required": true, "span": 1, "options": ["IT运维外包", "技术咨询", "实施服务"] },
+      { "key": "serviceContent", "label": "服务内容", "type": "textarea", "section": "content", "required": true, "span": 2 },
+      { "key": "billingMethod", "label": "计费方式", "type": "select", "section": "content", "required": true, "span": 1, "options": ["按人天", "按项目", "固定金额"] },
+      { "key": "teamSize", "label": "团队规模", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "slaLevel", "label": "SLA级别", "type": "select", "section": "content", "required": false, "span": 1, "options": ["金牌", "银牌", "铜牌"] },
+      { "key": "responseTimeHours", "label": "响应时间(小时)", "type": "number", "section": "content", "required": false, "span": 1 }
+    ],
+    "LEGAL": [
+      { "key": "serviceType", "label": "服务类型", "type": "select", "section": "content", "required": true, "span": 1, "options": ["诉讼代理", "法律顾问", "专项法律服务"] },
+      { "key": "serviceScope", "label": "服务范围", "type": "textarea", "section": "content", "required": true, "span": 2 },
+      { "key": "caseNumber", "label": "案号", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "courtName", "label": "法院名称", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "assignedLawyer", "label": "指派律师", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "litigationAmount", "label": "诉讼标的额", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "agencyFee", "label": "代理费", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "caseStatus", "label": "案件状态", "type": "select", "section": "content", "required": false, "span": 1, "options": ["一审", "二审", "执行", "结案"] }
+    ],
+    "LABOR": [
+      { "key": "position", "label": "岗位名称", "type": "text", "section": "content", "required": true, "span": 1 },
+      { "key": "department", "label": "所属部门", "type": "text", "section": "content", "required": true, "span": 1 },
+      { "key": "termType", "label": "期限类型", "type": "select", "section": "content", "required": true, "span": 1, "options": ["固定期限", "无固定期限", "以完成一定工作任务为期限"] },
+      { "key": "probationMonths", "label": "试用期(月)", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "workingHours", "label": "工时制度", "type": "select", "section": "content", "required": false, "span": 1, "options": ["标准工时", "综合计算工时", "不定时工时"] },
+      { "key": "workLocation", "label": "工作地点", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "confidentialityYears", "label": "保密年限", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "nonCompeteYears", "label": "竞业限制年限", "type": "number", "section": "content", "required": false, "span": 1 }
+    ],
+    "PURCHASE": [
+      { "key": "goodsCategory", "label": "物品分类", "type": "select", "section": "content", "required": true, "span": 1, "options": ["办公设备", "电子产品", "耗材", "其他"] },
+      { "key": "qualityStandard", "label": "质量标准", "type": "textarea", "section": "content", "required": true, "span": 2 },
+      { "key": "deliveryPlace", "label": "交货地点", "type": "text", "section": "content", "required": true, "span": 1 },
+      { "key": "brand", "label": "品牌", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "warrantyMonths", "label": "质保期(月)", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "inspectionMethod", "label": "验收方式", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "transportMethod", "label": "运输方式", "type": "select", "section": "content", "required": false, "span": 1, "options": ["陆运", "海运", "空运", "快递"] },
+      { "key": "prepayRatio", "label": "预付款比例", "type": "number", "section": "content", "required": false, "span": 1 }
+    ],
+    "LEASE": [
+      { "key": "leaseItem", "label": "租赁标的", "type": "text", "section": "content", "required": true, "span": 1 },
+      { "key": "leaseStartDate", "label": "起租日期", "type": "date", "section": "content", "required": true, "span": 1 },
+      { "key": "leaseEndDate", "label": "到期日期", "type": "date", "section": "content", "required": true, "span": 1 },
+      { "key": "monthlyRent", "label": "月租金", "type": "number", "section": "content", "required": true, "span": 1 },
+      { "key": "assetArea", "label": "租赁面积", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "depositAmount", "label": "押金金额", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "rentCycle", "label": "租金支付周期", "type": "select", "section": "content", "required": false, "span": 1, "options": ["月付", "季付", "半年付", "年付"] },
+      { "key": "purpose", "label": "租赁用途", "type": "text", "section": "content", "required": false, "span": 1 }
+    ],
+    "COOPERATION": [
+      { "key": "cooperationType", "label": "合作类型", "type": "select", "section": "content", "required": true, "span": 1, "options": ["技术合作", "市场合作", "资源置换", "其他"] },
+      { "key": "cooperationScope", "label": "合作范围", "type": "textarea", "section": "content", "required": true, "span": 2 },
+      { "key": "cooperationMechanism", "label": "合作机制", "type": "textarea", "section": "content", "required": false, "span": 2 },
+      { "key": "investmentA", "label": "甲方投入", "type": "textarea", "section": "content", "required": false, "span": 2 },
+      { "key": "investmentB", "label": "乙方投入", "type": "textarea", "section": "content", "required": false, "span": 2 },
+      { "key": "revenueShare", "label": "收益分配", "type": "text", "section": "content", "required": false, "span": 1 },
+      { "key": "exclusivity", "label": "排他性约定", "type": "select", "section": "content", "required": false, "span": 1, "options": ["独家合作", "非独家合作"] },
+      { "key": "validityPeriod", "label": "有效期", "type": "text", "section": "content", "required": false, "span": 1 }
+    ],
+    "FINANCE": [
+      { "key": "financeType", "label": "金融类型", "type": "select", "section": "content", "required": true, "span": 1, "options": ["借款", "担保", "保理", "融资租赁"] },
+      { "key": "loanAmount", "label": "借款/融资金额", "type": "number", "section": "content", "required": true, "span": 1 },
+      { "key": "loanTermMonths", "label": "期限(月)", "type": "number", "section": "content", "required": true, "span": 1 },
+      { "key": "annualInterestRate", "label": "年化利率(%)", "type": "number", "section": "content", "required": false, "span": 1 },
+      { "key": "repaymentMethod", "label": "还款方式", "type": "select", "section": "content", "required": false, "span": 1, "options": ["按月付息到期还本", "等额本息", "等额本金", "一次性还本付息"] },
+      { "key": "guaranteeType", "label": "担保方式", "type": "select", "section": "content", "required": false, "span": 1, "options": ["信用", "保证", "抵押", "质押"] },
+      { "key": "collateral", "label": "抵质押物", "type": "textarea", "section": "content", "required": false, "span": 2 },
+      { "key": "earlyRepayment", "label": "提前还款约定", "type": "textarea", "section": "content", "required": false, "span": 2 }
+    ]
+  },
+  "contractTypeSeedAliases": {
+    "软件开发": "IT_DEV",
+    "技术服务": "IT_SERVICE",
+    "法律服务": "LEGAL",
+    "劳动合同": "LABOR",
+    "买卖采购": "PURCHASE",
+    "租赁": "LEASE",
+    "租赁合同": "LEASE",
+    "战略合作": "COOPERATION",
+    "金融担保": "FINANCE"
+  }
+}
