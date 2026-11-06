@@ -1,7 +1,13 @@
 # 合同与项目管理桌面应用
 
 这是一个基于 Electron + Vue 3 + TypeScript 的 Windows 桌面应用。当前代码以 `contract` 分支为准，产品形态已经从早期的演示型资源工具，扩展为一个围绕合同、客户、供应商、项目和资料管理的本地业务工作台。
-
+![AI问询.png](images/AI%E9%97%AE%E8%AF%A2.png)
+![合同信息.png](images/%E5%90%88%E5%90%8C%E4%BF%A1%E6%81%AF.png)
+![合同详情.png](images/%E5%90%88%E5%90%8C%E8%AF%A6%E6%83%85.png)
+![合同预览.png](images/%E5%90%88%E5%90%8C%E9%A2%84%E8%A7%88.png)
+![批量导入合同.png](images/%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%90%88%E5%90%8C.png)
+![收款计划.png](images/%E6%94%B6%E6%AC%BE%E8%AE%A1%E5%88%92.png)
+![甲方信息.png](images/%E7%94%B2%E6%96%B9%E4%BF%A1%E6%81%AF.png)
 它的核心思路是：
 
 1. 先创建或加载本地资源库
@@ -408,3 +414,4 @@ npm run build:win
 - 补齐合同审批、日志审计、回款提醒和权限管理
 - 继续完善 AI 录入、OCR、全文检索和文件预览体验
 - 清理历史文档和失配测试脚本，降低维护成本
+  ](E:\hqkj\contract\code\contract)
