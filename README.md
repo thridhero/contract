@@ -1,6 +1,14 @@
-# 合同与项目管理桌面应用
 
-这是一个基于 Electron + Vue 3 + TypeScript 的 Windows 桌面应用。当前代码以 `contract` 分支为准，产品形态已经从早期的演示型资源工具，扩展为一个围绕合同、客户、供应商、项目和资料管理的本地业务工作台。
+
+# 宏起助手 —— 本地优先的合同与项目管理工作台
+
+## 一、项目简介
+
+**宏起助手**（software-registration-manager）是一款基于 **Electron + Vue 3 + TypeScript** 构建的 Windows 桌面应用，定位为"本地优先的合同与项目管理桌面工作台"。
+
+它不依赖任何云端服务即可完成全部核心业务：用户在本地创建或加载一个"资源库"，所有合同台账、客户/供应商、项目记录、业务字典等数据均存储在资源库目录下的 SQLite 数据库中，文件按合同自动归档到独立目录，实现数据的完全本地化掌控。
+
+在此基础上，项目集成了 **AI 结构化抽取、OCR 识别、全文检索、缩略图生成、文件格式转换**等能力，大幅提升合同录入与资料查找效率。
 ![AI问询.png](images/AI%E9%97%AE%E8%AF%A2.png)
 ![合同信息.png](images/%E5%90%88%E5%90%8C%E4%BF%A1%E6%81%AF.png)
 ![合同详情.png](images/%E5%90%88%E5%90%8C%E8%AF%A6%E6%83%85.png)
@@ -8,6 +16,130 @@
 ![批量导入合同.png](images/%E6%89%B9%E9%87%8F%E5%AF%BC%E5%85%A5%E5%90%88%E5%90%8C.png)
 ![收款计划.png](images/%E6%94%B6%E6%AC%BE%E8%AE%A1%E5%88%92.png)
 ![甲方信息.png](images/%E7%94%B2%E6%96%B9%E4%BF%A1%E6%81%AF.png)
+### 核心理念
+
+1. **本地优先**：数据存于用户自己的磁盘，无账号、无云端依赖
+2. **资源库模式**：一个目录即一个完整的工作空间（数据库 + 文件归档）
+3. **业务闭环**：覆盖合同"录入 → 归档 → 执行跟踪 → 收付款"全生命周期
+4. **智能化提效**：AI 解析合同、OCR 识别扫描件、FTS 全文搜索
+
+---
+
+## 二、技术栈
+
+### 桌面与前端框架
+
+| 技术 | 版本 | 用途 |
+|------|------|------|
+| Electron | 25.x | 桌面应用框架（主进程 + 渲染进程） |
+| Vue | 3.4+ | 前端框架，Composition API + `<script setup>` |
+| TypeScript | 5.x | 全项目类型系统（主进程/渲染进程分别配置 tsconfig） |
+| PrimeVue | 4.5+ | UI 组件库（配合 @primeuix/themes 主题系统） |
+| Tailwind CSS | 4.0 | 原子化样式 |
+| Pinia | 3.0 | 状态管理（libraryStore / projectStore / themeStore / aiStore 等） |
+| Vue Router | 4.2 | 路由（hash 模式） |
+| VeeValidate + Yup | — | 表单校验 |
+
+### 数据与文件处理
+
+| 技术 | 用途 |
+|------|------|
+| better-sqlite3 | 资源库 SQLite 数据库（含 FTS 全文索引表） |
+| sql.js | WebAssembly SQLite（备用方案） |
+| pdfjs-dist / pdf-lib | PDF 预览与操作 |
+| @vue-office/docx·excel·pptx | Office 文档预览 |
+| mammoth / word-extractor / turndown / file2md | Word 等文件转 HTML/Markdown |
+| xlsx / csv-parser | 表格导入导出 |
+| winston + winston-daily-rotate-file | 日志系统（按日轮转） |
+| PaddleOCR-json（内置资源） | 本地 OCR 识别引擎 |
+| html2canvas / qrcode / dompurify | 截图、二维码、HTML 消毒 |
+
+### AI 能力
+
+| 技术 | 用途 |
+|------|------|
+| @langchain/core + @langchain/langgraph | AI Agent 编排（合同统计、单位检索、发票检索等工具调用） |
+| 云端 API / 本地模型（llama.cpp + GGUF） | 双模式 AI 配置，支持连接测试与结构化生成 |
+
+### 构建与发布
+
+| 工具 | 用途 |
+|------|------|
+| Webpack 5 | 渲染进程打包 |
+| tsc | 主进程编译 |
+| electron-builder | Windows NSIS 安装包（`npm run build:win` 一键打包，含打包前置校验） |
+
+---
+
+## 三、已实现功能
+
+### 1. 资源库与初始化
+- 首次运行引导（FirstRunView）：新建或加载已有资源库
+- `bootstrap.json` 记录当前资源库路径；`global-config.json` 维护资源库列表、快捷分类、日志设置
+- 数据库备份与恢复（SQLite）
+
+### 2. 合同台账
+- 合同的增删改查、批量删除、排序移动
+- 字段覆盖合同编号、签约日期、甲乙方、金额、状态、执行方式、摘要、标签等
+- 合同详情弹窗 / 编辑弹窗，表单可对接字典数据
+
+### 3. 合同文件管理
+- 每份合同自动生成独立目录（`documents` / `source_code` / `certificates`）
+- 文件列表、复制、删除、重命名、新建文件夹、从路径写入索引
+- 缩略图自动生成、文件全文索引与全文搜索（含命中高亮）
+- 多格式预览：PDF、Word、Excel、PPT、Markdown、图片、发票等
+
+### 4. 客户与供应商管理
+- 甲方单位、乙方单位独立管理页面与完整 CRUD IPC 接口
+
+### 5. 合同业务扩展
+- 合同产品管理、合同执行管理、收款计划、合同收付款记录
+- 合同统计分析
+
+### 6. 项目管理台账
+- 项目新增、编辑、删除、排序、重新编码、分组统计
+- CSV 导入 / 导出
+
+### 7. 字典体系
+- 普通字典 + 树形字典管理
+- 分组改名、清空、CSV 导入导出、排序
+
+### 8. AI / OCR / 文件转换
+- AI 辅助解析合同文件并结构化填入表单（RAG + Agent 工具）
+- 云端与本地模型（llama.cpp）双模式配置、连接测试
+- 内置 PaddleOCR：扫描件 / 图片识别
+- 文件转 Markdown（PDF / Office / Word）
+
+### 9. 行政工具箱
+- PDF 合并 / 拆分 / 压缩、批量盖章
+- 图片 OCR、扫描件增强、印章提取、签名抠图
+- 发票识别与版式解析
+
+### 10. 其他
+- 标签与标签分组管理
+- 全局软删除（`deleted_at`）+ 回收站
+- 统一日志系统（winston 轮转、日志目录打开）
+- 多主题切换（主题设计 Token 体系）
+- 窗口关闭确认与任务监控（长任务进度）
+- 全文搜索重建索引、开发者设置面板
+
+---
+
+## 四、架构概览- **主进程**：`main.ts` 统一注册 IPC，启动时预加载当前资源库；`librarySchemaMigration` 负责表结构平滑升级
+- **预加载层**：以 `contract`、`customer`、`ai`、`search`、`fileCopy` 等 20+ 模块暴露类型安全 API
+- **渲染进程**：三栏式桌面主界面（MainLayout），按业务域拆分视图与 Store
+
+## 五、快速开始
+
+```bash
+npm run setup-electron-cn   # 国内网络建议先配置镜像
+npm install
+npm run build               # 构建主进程 + 渲染进程
+npm start                   # 启动应用
+npm run build:win           # 一键打包 Windows NSIS 安装包（产物在 release/）这份介绍涵盖了三个部分：**项目定位与理念**、**完整技术栈表格**、**按模块整理的已实现功能清单**，并补充了架构图和快速开始命令。你可以直接将其保存为 `docs/项目介绍.md`，或根据用途（如官网展示、软著申请、汇报材料）裁剪其中章节——如果需要针对某个特定场景的精简版，告诉我场景即可。# 合同与项目管理桌面应用
+
+这是一个基于 Electron + Vue 3 + TypeScript 的 Windows 桌面应用。当前代码以 `contract` 分支为准，产品形态已经从早期的演示型资源工具，扩展为一个围绕合同、客户、供应商、项目和资料管理的本地业务工作台。
+
 它的核心思路是：
 
 1. 先创建或加载本地资源库
@@ -414,4 +546,3 @@ npm run build:win
 - 补齐合同审批、日志审计、回款提醒和权限管理
 - 继续完善 AI 录入、OCR、全文检索和文件预览体验
 - 清理历史文档和失配测试脚本，降低维护成本
-  ](E:\hqkj\contract\code\contract)
